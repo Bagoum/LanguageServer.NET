@@ -21,10 +21,10 @@ namespace DemoLanguageServer
         static void Main(string[] args)
         {
             var debugMode = args.Any(a => a.Equals("--debug", StringComparison.OrdinalIgnoreCase));
-#if WAIT_FOR_DEBUGGER
-            while (!Debugger.IsAttached) Thread.Sleep(1000);
-            Debugger.Break();
-#endif
+            if (debugMode) {
+                while (!Debugger.IsAttached) Thread.Sleep(1000);
+                Debugger.Break();
+            }
             StreamWriter logWriter = null;
             if (debugMode)
             {

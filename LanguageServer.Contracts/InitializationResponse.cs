@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using JsonRpc;
-using JsonRpc.Messages;
-using LanguageServer.VsCode.Contracts.Client;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 

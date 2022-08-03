@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Nullable>enable</Nullable>
+        <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>..\LanguageServer.snk</AssemblyOriginatorKeyFile>
+        <TargetFrameworks>net6.0;netstandard2.1</TargetFrameworks>
+        <LangVersion>9</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="..\LanguageServer.snk">
+        <Link>LanguageServer.snk</Link>
+      </None>
+    </ItemGroup>
+
+</Project>
