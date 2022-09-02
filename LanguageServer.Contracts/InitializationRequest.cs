@@ -271,6 +271,12 @@ namespace LanguageServer.VsCode.Contracts
         /// </summary>
         [JsonProperty]
         public DynamicClientCapability SelectionRange { get; set; }
+        
+        /// <summary>
+        /// Capabilities specific to the various semantic token requests. (LSP 3.16)
+        /// </summary>
+        [JsonProperty]
+        public DynamicClientCapability? SemanticTokens { get; set; }
 
     }
 

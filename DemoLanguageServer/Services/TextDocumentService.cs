@@ -81,15 +81,13 @@ namespace DemoLanguageServer.Services
         {
             new CompletionItem(".NET", CompletionItemKind.Keyword,
                 "Keyword1",
-                MarkupContent.Markdown("Short for **.NET Framework**, a software framework by Microsoft (possibly its subsets) or later open source .NET Core."),
-                null),
+                MarkupContent.Markdown("Short for **.NET Framework**, a software framework by Microsoft (possibly its subsets) or later open source .NET Core.")),
             new CompletionItem(".NET Standard", CompletionItemKind.Keyword,
                 "Keyword2",
-                "The .NET Standard is a formal specification of .NET APIs that are intended to be available on all .NET runtimes.",
-                null),
+                "The .NET Standard is a formal specification of .NET APIs that are intended to be available on all .NET runtimes."),
             new CompletionItem(".NET Framework", CompletionItemKind.Keyword,
                 "Keyword3",
-                ".NET Framework (pronounced dot net) is a software framework developed by Microsoft that runs primarily on Microsoft Windows.", null),
+                ".NET Framework (pronounced dot net) is a software framework developed by Microsoft that runs primarily on Microsoft Windows."),
         };
 
         [JsonRpcMethod]
