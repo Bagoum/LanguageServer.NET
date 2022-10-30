@@ -209,6 +209,12 @@ public class ServerCapabilities {
     /// </summary>
     [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
     public JToken Experimental { get; set; }
+    
+    /// <summary>
+    /// The server provides inlay hints. (LSP 3.17)
+    /// </summary>
+    [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
+    public InlayHintOptions? InlayHintProvider { get; set; }
 }
 
 /// <summary>
@@ -593,6 +599,19 @@ public class WorkspaceOptions {
     /// The server supports workspace folder. (LSP 3.6)
     /// </summary>
     private WorkspaceFoldersServerCapabilities WorkspaceFolders { get; set; }
+}
+
+[JsonObject]
+public record InlayHintOptions : IWorkDoneProgressOptions {
+    /// <inheritdoc />
+    public bool WorkDoneProgress { get; set; }
+
+    /// <summary>
+    /// The server provides support to resolve additional
+    ///  information for an inlay hint item.
+    /// </summary>
+    public bool? ResolveProvider { get; set; } = null;
+
 }
 
 /// <summary>
